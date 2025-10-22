@@ -83,13 +83,20 @@ body {
     color: #7f8c8d;
 }
 
-/* --- AJUSTE PARA CELULARES (RESPONSIVIDADE) --- */
+/* --- AJUSTE PARA CELULARES (Opção 1: Colunas lado a lado) --- */
 @media (max-width: 768px) {
+    /* Removemos a regra de empilhar, então as colunas vão apenas se espremer */
     .container {
-        flex-direction: column; /* As colunas ficam uma em cima da outra */
+        /* A linha 'flex-direction: column;' foi removida */
+        padding: 0;
+        margin: 0;
+        border-radius: 0;
     }
     .sidebar, .main-content {
-        width: 100%; /* Ocupam a largura total */
-        padding: 20px;
+        /* O 'width: 100%;' foi removido para que mantenham suas larguras relativas */
+        padding: 15px; /* Diminui um pouco o espaçamento interno */
+    }
+    body {
+        padding: 0; /* Remove o padding do corpo em telas pequenas */
     }
 }
